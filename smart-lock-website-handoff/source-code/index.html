@@ -1,23 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Homepage Source — Awaiting Gemini Export</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCKKING | Premium Smart Lock OEM/ODM Manufacturer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0B192C',
+                            dark: '#07101A',
+                            light: '#1E2A38'
+                        },
+                        techblue: {
+                            DEFAULT: '#2563EB',
+                            hover: '#1D4ED8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-  <!-- HANDOFF PLACEHOLDER — NOT THE FINAL HOMEPAGE.
-       Replace this file with Gemini's approved homepage source.
-       Expected scope (verify against the actual design):
-       - bilingual English/Chinese content
-       - hero section
-       - product series / product highlights
-       - inquiry or contact form
-       Preserve Gemini's actual layout, copy, assets, and interactions.
-  -->
-  <main>
-    <h1>Homepage source pending</h1>
-    <p>Replace this placeholder with the original approved Gemini export.</p>
-  </main>
+<body class="bg-[#F8FAFC] text-[#1E293B] antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0B192C]/95 backdrop-blur-md border-b border-white/10 text-white">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-bold tracking-wider">LOCKKING</span>
+                <span class="text-xs uppercase bg-[#2563EB] px-2 py-0.5 rounded font-medium">OEM/ODM</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#products" class="hover:text-white transition" data-en="Products" data-cn="产品系列">Products</a>
+                <a href="#services" class="hover:text-white transition" data-en="OEM/ODM Services" data-cn="制造与服务">OEM/ODM Services</a>
+                <a href="#manufacturing" class="hover:text-white transition" data-en="Manufacturing & QC" data-cn="工厂与品控">Manufacturing & QC</a>
+                <a href="#about" class="hover:text-white transition" data-en="About Us" data-cn="关于我们">About Us</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleLanguage()" class="text-xs border border-white/20 px-3 py-1.5 rounded hover:bg-white/10 transition font-medium">
+                    <span id="lang-indicator">中 / EN</span>
+                </button>
+                <a href="#contact" class="bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2 rounded text-sm font-medium transition shadow-sm" data-en="Contact Us" data-cn="联系我们">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-[#0B192C] text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="inline-block text-xs uppercase tracking-widest text-[#2563EB] font-semibold bg-[#2563EB]/10 px-3 py-1 rounded mb-4 border border-[#2563EB]/30" data-en="PREMIUM OEM/ODM MANUFACTURING FOR GLOBAL BRANDS" data-cn="全球品牌的专业智能门锁 OEM/ODM 制造商">PREMIUM OEM/ODM MANUFACTURING FOR GLOBAL BRANDS</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight" data-en="SMART LOCKS. <br><span class='text-[#2563EB]'>BUILT FOR YOUR BRAND.</span>" data-cn="智能门锁。<br><span class='text-[#2563EB]'>成就您的品牌。</span>">
+                    SMART LOCKS. <br><span class="text-[#2563EB]">BUILT FOR YOUR BRAND.</span>
+                </h1>
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed" data-en="Enterprise-grade Smart Lever Lock manufacturing for North American & European brands. Full-stack R&D, certified quality control, and scalable production." data-cn="面向欧美品牌商、进口商与安防集成商的企业级智能执手锁制造。全栈研发、严苛品控与规模化量产交付。">
+                    Enterprise-grade Smart Lever Lock manufacturing for North American & European brands. Full-stack R&D, certified quality control, and scalable production.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-center px-8 py-3.5 rounded font-semibold transition shadow-lg shadow-blue-600/20" data-en="Contact Us" data-cn="联系商务洽谈">Contact Us</a>
+                    <a href="#products" class="border border-white/20 hover:bg-white/10 text-white text-center px-8 py-3.5 rounded font-semibold transition" data-en="Explore Products" data-cn="探索产品系列">Explore Products</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/3] bg-[#1E2A38] rounded-xl border border-white/10 shadow-2xl flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#0B192C] to-transparent opacity-60"></div>
+                    <div class="relative z-10">
+                        <svg class="w-16 h-16 text-[#2563EB] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        <h3 class="text-xl font-bold mb-2">Smart Lever Lock Series</h3>
+                        <p class="text-sm text-gray-400" data-en="[Industrial Concept Render: Precision Zinc-Alloy Finish on Modern Door]" data-cn="[工业级概念渲染图：现代高档大门上的精密锌合金执手锁]">[Industrial Concept Render: Precision Zinc-Alloy Finish]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Proof Bar -->
+    <section class="bg-[#1E2A38] py-8 border-y border-white/10 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <h4 class="font-bold text-lg text-[#2563EB]" data-en="Precision Engineering" data-cn="精密工程研发">Precision Engineering</h4>
+                <p class="text-xs text-gray-400 mt-1" data-en="Custom Tooling & ID Design" data-cn="定制模具与工业设计">Custom Tooling & ID Design</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg text-[#2563EB]" data-en="Multi-Protocol Ready" data-cn="多协议深度支持">Multi-Protocol Ready</h4>
+                <p class="text-xs text-gray-400 mt-1" data-en="BLE / Wi-Fi / Matter / Tuya" data-cn="蓝牙 / Wi-Fi / Matter / 涂鸦">BLE / Wi-Fi / Matter / Tuya</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg text-[#2563EB]" data-en="Rigorous QC" data-cn="严苛品质管控">Rigorous QC</h4>
+                <p class="text-xs text-gray-400 mt-1" data-en="100% Salt-Spray & Functional Testing" data-cn="100% 盐雾与功能出厂测试">100% Salt-Spray & Functional Testing</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg text-[#2563EB]" data-en="Scalable Capacity" data-cn="规模化量产交付">Scalable Capacity</h4>
+                <p class="text-xs text-gray-400 mt-1" data-en="High Monthly Output for Global Brands" data-cn="满足全球大客户的高月产能">High Monthly Output for Global Brands</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold mb-4" data-en="Engineered for Reliability: Smart Lever Series" data-cn="专为可靠性打造：智能执手锁系列">Engineered for Reliability: Smart Lever Series</h2>
+            <p class="text-gray-600" data-en="Tailored for residential, multi-family, and commercial OEM projects across North America and Europe." data-cn="专为欧美住宅、公寓及商业项目量身定制的 OEM 解决方案。">Tailored for residential, multi-family, and commercial OEM projects.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 font-medium text-sm">[Smart Lever - Matte Black]</div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-[#2563EB] uppercase" data-en="Residential Series" data-cn="住宅系列">Residential Series</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">LK-700 Pro Smart Lever</h3>
+                    <p class="text-sm text-gray-600 mb-4" data-en="Advanced biometric fingerprint reader with weatherproof zinc-alloy chassis." data-cn="先进半导体指纹识别，搭配防风雨锌合金外壳，适用于现代住宅入户大门。">Advanced biometric fingerprint reader with weatherproof zinc-alloy chassis.</p>
+                    <a href="products.html" class="block text-center bg-gray-900 hover:bg-[#2563EB] text-white py-2.5 rounded text-sm font-medium transition" data-en="View Specifications" data-cn="查看详细规格">View Specifications</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 font-medium text-sm">[Multi-Family / Commercial]</div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-[#2563EB] uppercase" data-en="Commercial Series" data-cn="商业与公寓系列">Commercial Series</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">LK-850 Multi-Family Lever</h3>
+                    <p class="text-sm text-gray-600 mb-4" data-en="Heavy-duty mortise structure designed for apartment complexes & offices." data-cn="专为公寓大楼、租赁物业及商业办公集成设计的重型插芯锁结构。">Heavy-duty mortise structure designed for apartment complexes & offices.</p>
+                    <a href="products.html" class="block text-center bg-gray-900 hover:bg-[#2563EB] text-white py-2.5 rounded text-sm font-medium transition" data-en="View Specifications" data-cn="查看详细规格">View Specifications</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 font-medium text-sm">[Minimalist Slim Lever]</div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-[#2563EB] uppercase" data-en="Slim Series" data-cn="极窄边框系列">Slim Series</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">LK-600 Slim Lever Lock</h3>
+                    <p class="text-sm text-gray-600 mb-4" data-en="Sleek aluminum alloy profile engineered for narrow-frame doors." data-cn="专为窄边框玻璃门、铝合金门及欧洲型材门设计的流畅铝合金轮廓门锁。">Sleek aluminum alloy profile engineered for narrow-frame doors.</p>
+                    <a href="products.html" class="block text-center bg-gray-900 hover:bg-[#2563EB] text-white py-2.5 rounded text-sm font-medium transition" data-en="View Specifications" data-cn="查看详细规格">View Specifications</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Contact Form Section -->
+    <section id="contact" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-xl p-8 md:p-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2" data-en="Ready to Build Your Smart Lock Brand?" data-cn="准备好打造您的智能门锁品牌了吗？">Ready to Build Your Smart Lock Brand?</h2>
+                <p class="text-gray-600 text-sm" data-en="Submit your OEM/ODM inquiry to connect directly with our engineering and sales team." data-cn="提交您的 OEM/ODM 询盘，直接与我们的工程与销售团队对接。">Submit your OEM/ODM inquiry to connect directly with our engineering and sales team.</p>
+            </div>
+            <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2" data-en="Full Name *" data-cn="您的姓名 *">Full Name *</label>
+                        <input type="text" required class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-[#2563EB]" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2" data-en="Company Email *" data-cn="企业邮箱 *">Company Email *</label>
+                        <input type="email" required class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-[#2563EB]" placeholder="john@brand.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2" data-en="Project Requirements" data-cn="项目需求说明">Project Requirements</label>
+                    <textarea rows="4" class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-[#2563EB]" placeholder="Specify your requirements..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold py-4 rounded transition shadow-md" data-en="Submit Inquiry & Request NDA" data-cn="提交询盘并申请 NDA 保护">Submit Inquiry & Request NDA</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#07101A] text-gray-400 py-12 border-t border-white/10 text-sm">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-white font-bold tracking-wider text-lg">LOCKKING</span>
+            <p class="text-xs text-gray-500 mt-1">© 2026 LOCKKING Smart Lock Manufacturer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'en';
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'cn' : 'en';
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${currentLang}`);
+            });
+            document.getElementById('lang-indicator').innerText = currentLang === 'en' ? '中 / EN' : 'EN / 中';
+        }
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert(currentLang === 'en' ? 'Inquiry submitted successfully!' : '询盘提交成功！');
+        }
+    </script>
 </body>
 </html>
