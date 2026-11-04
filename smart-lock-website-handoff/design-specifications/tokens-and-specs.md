@@ -1,74 +1,20 @@
-# Design Tokens and Specifications
+# Design Tokens & Specifications
 
-**Status:** Starter document. Replace TBD values with the exact values from Gemini's approved design output. Do not guess.
+## 1. 色彩系统 (Color Palette)
 
-## Brand and visual direction
-- Website purpose: smart-lock manufacturer / OEM / ODM lead generation.
-- Approved visual direction: professional, premium, modern technology/manufacturing presentation.
-- Brand name and logo: TBD
-- Primary market and languages: TBD (Gemini brief indicates bilingual English/Chinese; confirm exact language behavior).
+- **主色 / 深海军蓝 (Primary Navy):** `#0B192C`（用于导航栏、首屏深色背景、硬朗工业对比）
+- **辅助色 / 科技蓝 (Tech Blue):** `#2563EB`（用于核心 CTA 按钮、高亮标签、关键指标数字）
+- **文本深色 / 石墨灰 (Dark Slate):** `#1E293B`（用于正文段落、规格表格、标题文字）
+- **页面背景 / 浅灰白 (Background Light):** `#F8FAFC`（用于整体页面及卡片容器背景）
 
-## Color tokens
-| Token | Value | Usage | Status |
-|---|---|---|---|
-| --color-primary | TBD | Primary brand color | Awaiting exact Gemini value |
-| --color-secondary | TBD | Secondary surfaces / accents | Awaiting exact Gemini value |
-| --color-accent | TBD | Links, highlights, active states | Awaiting exact Gemini value |
-| --color-text | TBD | Main text | Awaiting exact Gemini value |
-| --color-muted | TBD | Secondary text | Awaiting exact Gemini value |
-| --color-background | TBD | Page background | Awaiting exact Gemini value |
-| --color-border | TBD | Dividers and borders | Awaiting exact Gemini value |
+## 2. 排版与字体 (Typography)
 
-## Typography
-| Role | Font family | Weight | Size / line-height | Status |
-|---|---|---|---|---|
-| Display / hero | TBD | TBD | TBD | Awaiting Gemini spec |
-| H1 | TBD | TBD | TBD | Awaiting Gemini spec |
-| H2 / H3 | TBD | TBD | TBD | Awaiting Gemini spec |
-| Body | TBD | TBD | TBD | Awaiting Gemini spec |
-| Buttons / labels | TBD | TBD | TBD | Awaiting Gemini spec |
-| Chinese fallback | TBD | TBD | TBD | Awaiting Gemini spec |
+- **字体族 (Font Family):** `'Inter', system-ui, -apple-system, sans-serif`
+- **标题样式 (Headings):** 粗体/半粗体，紧凑字距，展现精密工程感。
+- **正文样式 (Body Text):** 默认 16px，行高 1.6，确保 B2B 商务阅读可读性。
 
-## Layout and spacing
-- Desktop content max-width: TBD
-- Desktop grid / columns: TBD
-- Mobile horizontal padding: TBD
-- Spacing scale: TBD
-- Breakpoints: TBD
-- Header height and sticky behavior: TBD
-- Footer layout: TBD
+## 3. UI 组件与空间规范 (Components & Spacing)
 
-## Shape and component states
-- Border radius scale: TBD
-- Button height / padding: TBD
-- Button variants: TBD
-- Hover / focus / active / disabled states: TBD
-- Form validation and success/error states: TBD
-- Card borders and shadows: TBD
-
-## Responsive behavior
-Document the approved behavior for:
-- Navigation and mobile menu
-- Hero image/text stacking
-- Product grids and filters
-- Tables/specification cards
-- Forms and CTA buttons
-- Footer columns
-- Image cropping and aspect ratios
-
-## Interaction and accessibility
-Record actual approved behavior; do not infer:
-- Navigation destinations: TBD
-- Product filters and sorting: TBD
-- Language switcher behavior: TBD
-- Inquiry form fields and validation: TBD
-- Keyboard focus behavior: TBD
-- Minimum contrast / accessibility requirements: TBD
-
-## Approval log
-| Item | Status | Evidence / source | Date |
-|---|---|---|---|
-| Visual direction | To verify | Gemini approved design | TBD |
-| Color values | Pending | Gemini design tokens | TBD |
-| Typography | Pending | Gemini design tokens | TBD |
-| Responsive breakpoints | Pending | Gemini mobile design | TBD |
+- **圆角规范 (Border Radius):** 统一使用 `4px` 至 `6px`，保持硬朗的精密制造风格，避免过度圆润的 Consumer App 观感。
+- **阴影与层次 (Shadows):** 使用微弱投影：`box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05)`。
+- **最大容器宽度 (Max Width):** `max-w-7xl`（1280px），配合充沛的上下留白（Section Padding 80px–120px）。
