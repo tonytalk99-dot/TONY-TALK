@@ -1,41 +1,17 @@
-# LOCKKING Smart Lock OEM/ODM Website — Technical Handoff
+# LOCKKING Smart Lock Website - 运行与交互说明 (Mobile & Execution Guide)
 
-## 项目概述 (Project Overview)
+## 1. 移动端适配实现方案 (Mobile Responsive Implementation)
+正如交接要求所述，**移动端与桌面端共用同一套网站源码与设计语言**，没有采用独立或分离的移动端子站点。
+- **响应式断点 (Breakpoints):** 基于 Tailwind CSS 的标准响应式网格断点（如 `md:grid-cols-3` 在手机端自动堆叠为单列 `grid-cols-1`）。
+- **视口与触控优化 (Touch-friendly Hit Targets):** 移动端屏幕下自动收起水平长导航，并优化所有 CTA 按钮及表单输入框的间距（Padding）与触控靶心大小，确保单手拇指流操作顺畅。
 
-- **项目名称 (Project Name):** LOCKKING 智能门锁独立站 (Global B2B OEM/ODM Manufacturer)
-- **目标市场 (Target Market):** 欧美地区的品牌商、进口商、批发商及安防集成商 (Brands, Importers, Wholesalers, Security System Integrators)
-- **视觉风格 (Visual Direction):** 欧美工业科技感、高端专业；深海军蓝 (`#0B192C`) 与科技蓝 (`#2563EB`)。避免廉价 B2C 零售或阿里巴巴/1688 批发风格。
+## 2. 交互逻辑与按钮行为 (Interaction Logic & Behaviors)
+- **中英文实时切换 (Bilingual Toggle):** 点击导航栏右侧的 `中 / EN` 按钮，通过 JavaScript 遍历所有带有 `data-en` 和 `data-cn` 属性的 DOM 元素，瞬间实现文案无刷新切换。
+- **B2B 询盘表单 (Lead Generation Form):** 首页底部的表单包含姓名、企业邮箱、采购量 (MOQ) 选择与定制需求输入。提交后会触发本地交互反馈（Alert 提示并支持多语言文案适配），方便前端开发者对接后端 API。
+- **锚点平滑滚动 (Smooth Scrolling):** 导航栏中的产品、工厂、联系我们等链接均采用平滑滚动定位，提升海外 B2B 用户的浏览体验。
 
-## 核心架构与功能需求 (Key Architectural Requirements)
-
-1. **中英文实时切换 (Bilingual Support):** 支持全站文本节点和按钮在英文 (`en`) 与中文 (`cn`) 之间一键切换。
-2. **响应式与移动端一体化 (Responsive Mobile-First):** 移动端与桌面端共享同一套视觉资产与设计规范，通过弹性网格及移动端折叠菜单适配。
-3. **B2B 询盘转化导向 (B2B Conversion Focus):** 核心目标是获取海外大客户询盘 (Inquiries / RFQ) 及 NDA 保护申请，而非直接网购下单。
-
-## 交接目录结构 (Handoff Structure)
-
-- `README.md`: 技术交接说明。
-- `design-specifications/tokens-and-specs.md`: 完整设计规范（颜色、字体、间距、圆角）。
-- `source-code/index.html`: 首页完整源码。
-- `source-code/products.html`: 产品列表页源码。
-- `source-code/mobile-responsive.html`: 移动端适配源码/说明；优先采用桌面与移动端共用的响应式实现。
-- `assets/placeholders.md`: 素材与图片清单说明。
-
-## 工作流程 (Workflow)
-
-1. **Gemini:** 提供已批准的视觉设计、页面源代码、响应式实现和素材。
-2. **ChatGPT:** 审核代码、设计规范和素材完整性，整理技术方案与开发任务。
-3. **Codex:** 根据审核通过的交接成果进行编码、整合和测试。
-
-## 导入状态 (Import Status)
-
-本仓库此前建立的是交接目录骨架。当前 README 已更新为 Gemini 提供的项目说明；其他文件仍需以 Gemini 实际输出为准。不得将占位文件视为最终设计或真实实现。
-
-## 导入与验收要求 (Import and Review)
-
-- 保留 Gemini 已确认的设计，不在代码交接阶段擅自重新设计。
-- 每个文件按实际路径保存，代码必须完整，不得使用省略号、伪代码或占位内容代替。
-- 图片、图标、字体等素材应提供真实文件或可访问来源，并注明用途。
-- 未经确认的产品规格、功能、认证、价格、评价及制造能力一律标记为 TBD，不得编造。
-- 桌面端和移动端应保持一致的品牌视觉；优先使用同一套代码和响应式布局。
-- 正式交给 Codex 前，由 ChatGPT 检查页面、依赖、资源路径、交互、多语言和响应式行为。
+## 3. 项目运行方法 (How to Run & Test)
+本独立站采用轻量化现代前端架构（HTML5 + Tailwind CSS CDN + Vanilla ES6 JS），无需复杂的 Webpack 或 Vite 编译配置：
+1. 将 `index.html` 和 `products.html` 放入同一个本地文件夹中。
+2. 直接在任意现代浏览器（Chrome, Safari, Edge）中双击打开 `index.html`。
+3. 您即可实时测试中英文双语切换、响应式视口缩放及 B2B 表单交互。
